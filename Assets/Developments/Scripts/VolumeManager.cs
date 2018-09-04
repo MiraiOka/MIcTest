@@ -68,11 +68,27 @@ public class VolumeManager : MonoBehaviour
             volumeClass.SaveAsync();
         });
     }
-
+    
     public void setS_Volume(float s)
     {
         S_Volume = s;
-        volumeClass["s"] = S_Volume;
-        volumeClass.SaveAsync();
+
+		NCMBQuery<NCMBObject> query = new NCMBQuery<NCMBObject>("VolumeClass");
+        query.FindAsync((List<NCMBObject> objList, NCMBException e) =>
+        {
+            if (e == null)
+            {
+				if (objList.Count != 0)
+                {
+                    volumeClass.ObjectId = objList[0].ObjectId;
+					volumeClass["s"] = S_Volume;
+                    volumeClass.SaveAsync();               
+                }            
+            }
+            else
+            {
+                print("Error:" + e);
+            }
+        });
     }
 }

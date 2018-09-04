@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{04AAB29C-79C4-0359-7D98-B270297E54C4}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Developments/Scripts/VolumeManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Developments/Scripts/SVolumeController.cs">
     <Files>
-      <File FileName="Assets/Developments/Scripts/VolumeManager.cs" Line="13" Column="38" />
-      <File FileName="Assets/Developments/Scripts/SVolumeController.cs" Line="26" Column="14" />
+      <File FileName="Assets/Developments/Scripts/VolumeManager.cs" Line="82" Column="41" />
+      <File FileName="Assets/Developments/Scripts/SVolumeController.cs" Line="62" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

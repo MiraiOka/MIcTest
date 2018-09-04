@@ -34,6 +34,17 @@ public class SVolumeController : MonoBehaviour
 
     void Update()
     {
+		float[] data = new float[256];
+        float vol = 0;
+        audio.GetOutputData(data, 0);
+        foreach (float s in data)
+        {
+            vol += Mathf.Abs(s);
+        }
+
+        VolumeManager.instance.setS_Volume(vol);
+		print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:::" + vol);
+
         NCMBObject volumeClass = new NCMBObject("VolumeClass");
 
         NCMBQuery<NCMBObject> query = new NCMBQuery<NCMBObject>("VolumeClass");
@@ -48,17 +59,6 @@ public class SVolumeController : MonoBehaviour
                 print("Error:" + e);
             }
         });
-
-
-        float[] data = new float[256];
-        float vol = 0;
-        audio.GetOutputData(data, 0);
-        foreach (float s in data)
-        {
-            vol += Mathf.Abs(s);
-        }
-
-        VolumeManager.instance.setS_Volume(vol);
     }
     /*
         void changeText()
@@ -77,22 +77,18 @@ public class SVolumeController : MonoBehaviour
                     print("Error:" + e);
                 }
             });
-        }
-    */
+        }*/
+    
 
     void plusS()
     {
         S_Volume++;
         VolumeManager.instance.setS_Volume(S_Volume);
-        //changeText();
     }
 
-    void minusS()
-    {
-        S_Volume--;
-        VolumeManager.instance.setS_Volume(S_Volume);
-        //changeText();
-    }
-
-
+	void minusS()
+	{
+		S_Volume--;
+		VolumeManager.instance.setS_Volume(S_Volume);      
+	}
 }
