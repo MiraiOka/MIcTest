@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using NCMB;
+using UnityEngine.UI;
 
 public class VolumeManager : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class VolumeManager : MonoBehaviour
     [SerializeField] float C_Volume;
     [SerializeField] float D1_Volume;
     [SerializeField] float D3_Volume;
+
+	[SerializeField] Text sText;
+	[SerializeField] Text aText;
 
     NCMBObject volumeClass;
 
@@ -70,8 +74,26 @@ public class VolumeManager : MonoBehaviour
             volumeClass.SaveAsync();
         });
     }
-    
-    public void setS_Volume(float s)
+
+	private void Update()
+	{
+		NCMBObject volumeClass = new NCMBObject("VolumeClass");
+        NCMBQuery<NCMBObject> query = new NCMBQuery<NCMBObject>("VolumeClass");
+        query.FindAsync((List<NCMBObject> objList, NCMBException e) =>
+        {
+            if (e == null)
+            {
+				sText.text = (objList[0])["s"].ToString();
+				aText.text = (objList[0])["a"].ToString();
+            }
+            else
+            {
+                print("Error:" + e);
+            }
+        });
+	}
+
+	public void setS_Volume(float s)
     {
         S_Volume = s;
 

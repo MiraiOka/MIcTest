@@ -591,6 +591,8 @@ MonoBehaviour:
   C_Volume: 0
   D1_Volume: 0
   D3_Volume: 0
+  sText: {fileID: 1328364210}
+  aText: {fileID: 506681396}
 --- !u!1 &1264257455
 GameObject:
   m_ObjectHideFlags: 0
