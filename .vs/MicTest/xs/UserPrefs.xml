@@ -1,6 +1,14 @@
 ﻿<Properties StartupConfiguration="{04AAB29C-79C4-0359-7D98-B270297E54C4}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Plugins/NCMB/Script/NCMBDebug.cs">
+    <Files>
+      <File FileName="Assets/Developments/Scripts/AVolumeController.cs" Line="32" Column="49" />
+      <File FileName="Assets/Plugins/NCMB/Script/NCMBObject.cs" Line="200" Column="1" />
+      <File FileName="Assets/Plugins/NCMB/Script/NCMBDebug.cs" Line="44" Column="6" />
+      <File FileName="Assets/Developments/Scripts/SVolumeController.cs" Line="84" Column="5" NotebookId="1" />
+      <File FileName="Assets/Developments/Scripts/VolumeManager.cs" Line="114" Column="37" NotebookId="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
