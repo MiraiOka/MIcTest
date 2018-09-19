@@ -45,7 +45,6 @@ public class SVolumeController : MonoBehaviour
         }
 
         VolumeManager.instance.setS_Volume(vol);
-		print(vol);
        
         NCMBObject volumeClass = new NCMBObject("VolumeClass");
         

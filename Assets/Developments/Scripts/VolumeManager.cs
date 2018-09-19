@@ -9,6 +9,7 @@ public class VolumeManager : MonoBehaviour
     public static VolumeManager instance;
 
     [SerializeField] float S_Volume;
+	[SerializeField] float A_Volume;
     [SerializeField] float A1_Volume;
     [SerializeField] float A3_Volume;
     [SerializeField] float B1_Volume;
@@ -65,6 +66,7 @@ public class VolumeManager : MonoBehaviour
                 print("Error:" + e);
             }
             volumeClass["s"] = 0;
+			volumeClass["a"] = 0;
             volumeClass.SaveAsync();
         });
     }
@@ -91,4 +93,26 @@ public class VolumeManager : MonoBehaviour
             }
         });
     }
+
+	public void setA_Volume(float s) {
+		A_Volume = s;
+
+		NCMBQuery<NCMBObject> query = new NCMBQuery<NCMBObject>("VolumeClass");
+        query.FindAsync((List<NCMBObject> objList, NCMBException e) =>
+        {
+            if (e == null)
+            {
+                if (objList.Count != 0)
+                {
+                    volumeClass.ObjectId = objList[0].ObjectId;
+                    volumeClass["a"] = A_Volume;
+                    volumeClass.SaveAsync();
+                }
+            }
+            else
+            {
+                print("Error:" + e);
+            }
+        });
+	}
 }
