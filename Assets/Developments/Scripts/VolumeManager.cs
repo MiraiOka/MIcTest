@@ -26,6 +26,9 @@ public class VolumeManager : MonoBehaviour
 	[SerializeField] Text sText;
 	[SerializeField] Text aText;
 
+	[SerializeField] GameObject[] S_Fire;
+	[SerializeField] GameObject[] A_Fire;
+
     NCMBObject volumeClass;
 
     public VolumeManager(float s, float a1, float a3, float b1, float b3, float rp, float lp, float rb, float lb, float c, float d1, float d3)
@@ -83,8 +86,17 @@ public class VolumeManager : MonoBehaviour
         {
             if (e == null)
             {
+				double s = System.Convert.ToDouble((objList[0])["s"]);
+				double a = System.Convert.ToDouble((objList[0])["a"]);
 				sText.text = (objList[0])["s"].ToString();
 				aText.text = (objList[0])["a"].ToString();
+				for (int i = 0; i < 3; i++) {
+					float sScale = (float)s * 100;
+					float aScale = (float)a * 100;
+					S_Fire[i].gameObject.transform.localScale = new Vector3(sScale, sScale, sScale);
+					A_Fire[i].gameObject.transform.localScale = new Vector3(aScale, aScale, aScale);
+				}
+
             }
             else
             {
