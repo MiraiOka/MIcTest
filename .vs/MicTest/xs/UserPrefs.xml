@@ -2,9 +2,9 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Developments/Scripts/VolumeManager.cs">
     <Files>
-      <File FileName="Assets/Developments/Scripts/AVolumeController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Developments/Scripts/SVolumeController.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets/Developments/Scripts/VolumeManager.cs" Line="25" Column="19" NotebookId="1" />
+      <File FileName="Assets/Developments/Scripts/AVolumeController.cs" Line="3" Column="19" />
+      <File FileName="Assets/Developments/Scripts/SVolumeController.cs" Line="3" Column="19" NotebookId="1" />
+      <File FileName="Assets/Developments/Scripts/VolumeManager.cs" Line="86" Column="1" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
